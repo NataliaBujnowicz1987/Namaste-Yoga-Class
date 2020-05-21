@@ -1,0 +1,98 @@
+h2 {
+    text-align: center;
+    color: var(--colorColar);
+    margin: 20px;
+    letter-spacing: 8px;
+    font-weight: 800;
+    text-shadow: 0px 1px 3px #000;
+}
+
+div.contact-box {
+    background-color: #cc9999;
+    width: 80%;
+    height: auto;
+    padding: 25px 0;
+    margin: 30px auto;
+    box-shadow: 0px 0px 5px 5px pink;
+}
+
+div.contact-box input, 
+div.contact-box textarea {
+    padding: 8px;
+    width: 66%;
+    margin-bottom: 10px;
+}
+
+div.contact-box input:focus,
+div.contact-box textarea:focus {
+    border: 2px solid var(--colorViolet);
+}
+
+div.contact-box label {
+    display: inline-block;
+    color: var(--colorColar);
+    text-shadow: 0px 1px 3px #000;
+   padding: 5px;
+}
+
+div.contact-box button {
+    padding: 10px;
+    color: var(--colorViolet);
+    font-weight: 800;
+    cursor: pointer;
+    margin: 10px;
+}
+
+div.contact-box a {
+    text-decoration: none;
+    color:  var(--colorColar);
+}
+
+div.contact-box a:hover {
+    color: var(--colorViolet);
+    text-shadow: 0px 0px 15px #fff;
+}
+
+div.contact-box .fas, .far {
+    color: var(--colorColar);
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 5px #000;
+}
+
+.horizontal-line {
+    width: 60%;
+    margin: 0 auto;
+    height: 1px;
+    box-shadow: 1px 1px 1px pink;
+    background: var(--colorViolet);
+}
+
+i.fab {
+    font-size: 25px;
+    color: var(--colorColar);
+    text-shadow: 0px 1px 5px #000;
+    padding: 15px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+i.fab:hover {
+    color: var(--colorViolet);
+    text-shadow: 0px 0px 15px #fff;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1025px) {
+    div.contact-box {
+    text-align: center;
+    }
+}
+
+@media (max-width: 568px) {
+    h2 {
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+}

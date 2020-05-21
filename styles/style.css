@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    --colorViolet: #996699;
+    --colorPink: #cc9999;
+    --colorColar: #ffcc99;
+    --mainFont: 'Libre Baskerville', serif;
+} 
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#left {
+    background-color: var(--colorPink);
+    width: 50%;
+    font-family: var(--mainFont);
+    position: relative;
+    border-right: 2px solid pink;
+}
+
+nav {
+    display: block;
+    text-align: center;
+    margin: 40px;
+    color: var(--colorViolet);
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+nav li {
+    /* grow shrink basis */
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+    cursor: pointer;
+}
+
+.link-animation {
+    display: inline-block;
+    color: var(--colorViolet);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.link-animation::after,
+.link-animation::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    box-shadow: 1px 1px 1px pink;
+    background: var(--colorViolet);
+    transition: width .9s;
+    margin-left: -20%;
+}
+
+.link-animation::after {
+    margin-top: 5px;
+}
+
+.link-animation::before {
+    margin-bottom: 5px;
+}
+
+.link-animation:hover::before,
+.link-animation:hover::after,
+.link-animation:focus::after,
+.link-animation:focus::before {
+    width: 140%;
+    transition: width .9s;
+}
+
+#logo {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img{
+    width: 80%;
+}
+
+#right {
+    background-color: var(--colorViolet);
+    font-family: var(--mainFont);
+    width: 50%;
+    text-align: center;
+    overflow: auto;
+    height: auto;
+}
+
+#right h1 {
+    color: var(--colorColar);
+    font-size: 70px;
+    margin: 5px 0 20px 0;
+    letter-spacing: 10px;
+    font-weight: 100;
+    text-shadow: 0px 1px 3px #000;
+}
+
+#right p {
+    margin: 30px 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--colorColar);
+}
+
+#right img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 5px 5px pink;
+    margin: 10px 0;
+}
+
+footer {
+    color: var(--colorColar);
+    font-size: 13px;
+    padding: 10px;
+}
+
+#mobile {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1025px) {
+    #left, #right {
+        display: none;
+    }
+
+    #mobile {
+        display: inline-block;
+        font-family: var(--mainFont);
+        width: 100vw;
+        height: auto;
+        overflow: scroll;
+        background-color: var(--colorViolet);
+    }
+
+    .mobile-header {
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .mobile-header img {
+        height: 120%;
+    }
+
+    .mobile-header h1 {
+        color: var(--colorColar);
+        font-size: 60px;
+        margin: 20px 90px;
+        letter-spacing: 10px;
+    }
+
+    #mobile nav {
+        background-color: var(--colorPink);
+        margin: 0 ;
+        padding: 5px 0;
+        font-size: 20px;
+    }
+
+    .mobile-main p {
+        margin: 25px 20px;
+        font-size: 13px;
+        line-height: 1.5;
+        text-align: center;
+        color: var(--colorColar);
+    }
+
+    .mobile-main img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0px 0px 5px 5px pink;
+        margin: 5px 0;
+    }
+
+    #mobile footer {
+        color: var(--colorColar);
+        font-size: 13px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 568px) {
+    .mobile-header {
+        height: 10vh;
+        padding: 5px 0;
+    }
+
+    .mobile-header img {
+        height: 90%;
+    }
+
+    .mobile-header h1 {
+        font-size: 35px;
+        margin: 15px;
+        letter-spacing: 8px;
+    }
+
+    #mobile nav {
+        padding: 3px 5px;
+        font-size: 13px;
+    }
+
+    .mobile-main p {
+        margin: 20px 13px;
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    #mobile footer {
+        font-size: 10px;
+    }
+}

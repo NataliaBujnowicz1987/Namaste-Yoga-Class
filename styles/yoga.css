@@ -1,0 +1,15 @@
+h2 {
+    text-align: center;
+    color: var(--colorColar);
+    margin: 25px;
+    letter-spacing: 8px;
+    font-weight: 800;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 568px) {
+    h2 {
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+}
